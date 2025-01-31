@@ -214,6 +214,7 @@ a:focus,
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  animation: introImageAnimation 1.5s ease-out;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
@@ -244,6 +245,61 @@ header .intro-text {
   padding-bottom: 200px;
   text-align: center;
 }
+/* Add keyframes for the animation */
+@keyframes introImageAnimation {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add styles for the transparent box behind the h1 element */
+.intro .transparent-box {
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  border-radius: 10px;  
+}
+
+/* Add keyframes for the header animation */
+@keyframes headerAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add keyframes for the button animation */
+@keyframes buttonAnimation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animations */
+.animated-header {
+  animation: headerAnimation 1.5s ease-out;
+}
+
+.animated-button {
+  animation: buttonAnimation 1.5s ease-out 1.3s;
+  animation-fill-mode: forwards;
+  margin-top: 20px; 
+  opacity: 0;
+}
+
 /* Features Section */
 #features {
   background: #f6f6f6;

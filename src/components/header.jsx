@@ -8,14 +8,15 @@ export const Header = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h1>
-                  {props.data ? props.data.title : "Loading"}
-                  <span></span>
-                </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                <div className="transparent-box animated-header">
+                  <h1>
+                    {props.data ? props.data.title : "Loading"}
+                    <span></span>
+                  </h1>
+                </div>
                 <a
                   href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
+                  className="btn btn-custom btn-lg page-scroll animated-button mt-4"
                 >
                   Learn More
                 </a>{" "}
